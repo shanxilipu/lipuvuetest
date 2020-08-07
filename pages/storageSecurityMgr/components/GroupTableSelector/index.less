@@ -1,0 +1,51 @@
+@import '~@/pages/styles/vars.less';
+
+.groupTableSelector {
+  height: 100%;
+  .resizable {
+    border-bottom: 1px solid @border-color-base;
+  }
+  .selectGroupTip {
+    padding: 7px 7px 0;
+    font-size: @font-size-lg;
+  }
+  .tree {
+    height: calc(100% - 28px);
+    &.hasSelectedTable {
+      :global {
+        li.ant-tree-treenode-selected > span.ant-tree-node-content-wrapper::before {
+          background: #e7e7e7 !important;
+        }
+      }
+    }
+  }
+  .bottom {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    .bottomSearch {
+      padding: 8px 10px;
+      background-color: rgba(248, 248, 248, 1);
+    }
+    .tableBox {
+      flex: 1 1 auto;
+      overflow: hidden;
+    }
+    .tableList {
+      height: calc(100% - @table-footer-height);
+      overflow: auto;
+      .tableListItem {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 25px;
+        width: 100%;
+        cursor: pointer;
+        font-size: @font-size-lg;
+        &.activeTableListItem,
+        &:hover {
+          background-color: fade(@primary-color, 10%);
+        }
+      }
+    }
+  }
+}

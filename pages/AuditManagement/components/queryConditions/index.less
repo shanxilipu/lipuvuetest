@@ -1,0 +1,50 @@
+.queryConditionsCon {
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.colCon {
+  display: flex;
+  align-items: center;
+  .colLeft {
+    width: 90px;
+    text-align: right;
+    padding: 0 3px 0 5px;
+    font-size: 12px;
+    color: #2d3040;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .colLeftPadding {
+    padding-right: 10px;
+  }
+  .colRight {
+    flex: 1;
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1;
+    :global {
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.enForm {
+  .colCon .colLeft {
+    width: 40%;
+  }
+}
+.searchBtn {
+  justify-content: flex-end;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.mr10 {
+  margin-right: 10px;
+}

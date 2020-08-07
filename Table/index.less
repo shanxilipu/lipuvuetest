@@ -1,0 +1,112 @@
+@import '~antd/es/style/themes/default.less';
+@import '~@/pages/styles/vars.less';
+
+.table {
+  height: 100%;
+  :global {
+    .ant-table-tbody > tr.ant-table-row:hover,
+    .ant-table-tbody > tr.ant-table-row.active-row {
+      background-color: @table-selected-row-bg !important;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected td {
+      background: inherit;
+    }
+    .ant-table-body-inner {
+      background: #fff;
+    }
+    .ant-table-row-expand-icon + div {
+      display: inline;
+    }
+  }
+  .box {
+    padding: @table-padding @table-padding 0 @table-padding;
+    height: calc(100% - @table-footer-height - 1px);
+    &.noPadding {
+      padding: 0;
+    }
+    &.noFooter {
+      height: 100%;
+    }
+    &.showFooter {
+      :global {
+        .ant-table-content .ant-table-tbody > tr:last-child td {
+          border-bottom: none;
+        }
+        .ant-table-placeholder {
+          border-bottom: none;
+        }
+      }
+    }
+    &.hideDefaultHeaderCheckbox {
+      :global {
+        .ant-table-selection-column .ant-table-header-column {
+          display: none !important;
+        }
+      }
+    }
+    &.smallSizeTable {
+      :global {
+        .ant-table-thead > tr > th,
+        .ant-table-small
+          > .ant-table-content
+          > .ant-table-scroll
+          > .ant-table-body
+          > table
+          > .ant-table-tbody
+          > tr
+          > td {
+          padding: 10px 8px !important;
+          height: 40px;
+        }
+      }
+    }
+    &.expandable {
+      :global {
+        .ant-table-expand-icon-th,
+        .ant-table-row-expand-icon-cell {
+          width: 36px;
+          min-width: 36px;
+        }
+      }
+    }
+    &.checkable {
+      :global {
+        .ant-table-expand-icon-th,
+        .ant-table-selection-col {
+          width: 36px;
+          min-width: 36px;
+        }
+      }
+    }
+    &.checkableAndExpandable {
+      // checkbox和expand icon互换位置
+      :global {
+        .ant-table-row-expand-icon-cell {
+          & > .ant-table-row-expand-icon {
+            position: relative;
+            left: 36px;
+          }
+        }
+        .ant-table-selection-column {
+          & > span {
+            position: relative;
+            left: -32px;
+          }
+        }
+      }
+    }
+  }
+  .hideSelectionRow {
+    :global {
+      .ant-table-selection-column {
+        .ant-radio-wrapper,
+        .ant-checkbox-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.myTablePagination {
+  padding-left: 38px;
+}

@@ -1,0 +1,47 @@
+@import '~@/pages/styles/vars.less';
+
+.topBar {
+  padding: @table-padding @table-padding 0;
+}
+.table {
+  height: calc(100% - @btn-height-base - @table-padding);
+}
+.switcherCol {
+  display: flex;
+  align-items: center;
+  & > span {
+    margin-left: 8px;
+  }
+}
+.userListSearch {
+  width: 350px;
+  margin: @table-padding 0 0 @table-padding;
+}
+.userListTable {
+  height: calc(100% - @input-height-sm - @table-padding);
+}
+.addAuthModal {
+  height: 100%;
+  display: flex;
+  border: 1px solid @border-color-base;
+  border-bottom: 0;
+}
+.addAuthModalLeft {
+  width: 270px;
+  height: 100%;
+}
+.addAuthModalRight {
+  height: 100%;
+  width: calc(100% - 270px);
+  border-left: 1px solid @border-color-base;
+  .userListBox {
+    height: calc(100% - 80px);
+  }
+  .divider {
+    margin: 0;
+    background: @border-color-base;
+  }
+  .userListPagination {
+    padding-left: @table-padding;
+  }
+}

@@ -1,0 +1,64 @@
+.page {
+  display: flex; //ie使用flex布局
+  display: grid; // ie不支持 ，不生效
+  grid-template-columns: 320px 1fr;
+  height: 100%;
+  .l {
+    //width: 320px;
+    background: #fff;
+    height: 100%;
+    padding: 0 16px 16px;
+    overflow: auto;
+    .lh {
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+  .r {
+    flex: 1 0;
+    padding: 16px;
+    background: #fff;
+    word-break: break-all;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    .rTab {
+      flex: 1;
+      & > :global(.ant-tabs-content) {
+        height: calc(100% - 57px);
+        & > :global(.ant-tabs-tabpane) {
+          height: 100%;
+          overflow: auto;
+        }
+      }
+    }
+    .rt {
+      padding: 0 16px;
+    }
+    .rb {
+      //position: absolute;
+      width: 100%;
+      height: 30px;
+      padding-top: 5px;
+      .rbl {
+        float: left;
+        .rblc {
+          display: inline-block;
+          margin: 0 16px 0 4px;
+          // letter-spacing: 4px;
+        }
+      }
+      .rbr {
+        float: right;
+      }
+    }
+  }
+  :global {
+    .ant-tree-title {
+      display: inline-flex;
+      width: inherit;
+      justify-content: space-between;
+    }
+  }
+}

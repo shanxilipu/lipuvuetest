@@ -1,0 +1,41 @@
+.colCon {
+  display: flex;
+  margin-bottom: 10px;
+  .colLeft {
+    width: 90px;
+    text-align: right;
+    padding: 10px 3px 0 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .colLeftPadding {
+    padding-right: 10px;
+    padding-top: 7px;
+  }
+  .colRight {
+    flex: 1;
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1;
+    :global {
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.searchBtn {
+  justify-content: flex-end;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.mr10 {
+  margin-right: 10px;
+}

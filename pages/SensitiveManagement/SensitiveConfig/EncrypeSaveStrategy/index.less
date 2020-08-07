@@ -1,0 +1,106 @@
+.indexCon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .mainCon {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 10px 0;
+    background: #fff;
+    .btnCon {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .tableCon {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
+
+.CreatKeyCon {
+  .timeCon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .tip {
+      margin-right: 10px;
+    }
+  }
+  .mainCon {
+    display: flex;
+    .noFiledCon {
+      width: 360px;
+    }
+    .btnCon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      i {
+        font-size: 18px;
+        cursor: pointer;
+        padding: 10px;
+      }
+    }
+    .filedCon {
+      flex: 1;
+    }
+    .tableOutCon {
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      .tableCon {
+        padding-top: 10px;
+        flex: 1;
+        overflow: auto;
+      }
+    }
+  }
+  :global {
+    .ant-card-head-title {
+      height: 44px;
+    }
+    .ant-card-body {
+      padding-bottom: 0;
+    }
+    .ant-pagination {
+      display: none;
+    }
+  }
+}
+
+.overlayDatasourceCon {
+  height: 300px;
+  overflow: hidden;
+  background: #fff;
+  width: 290px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding-top: 5px;
+}
+
+.UpdataTime {
+  .timeCon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    // .tip{
+    //   display: inline-block;
+    //   width: 50px;
+    //   margin-right: 10px;
+    // }
+  }
+  .tip {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+  }
+}
+
+.operator {
+  color: @primary-color;
+  cursor: pointer;
+}

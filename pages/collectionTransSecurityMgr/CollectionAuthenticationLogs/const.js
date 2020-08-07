@@ -1,0 +1,31 @@
+export const DATASOURCE_TAPE = [
+  { value: 'ssh', label: 'ssh' },
+  { value: 'oracle', label: 'oracle' },
+  { value: 'mysql', label: 'mysql' },
+  { value: 'hive', label: 'hive' },
+  { value: 'hbase', label: 'hbase' },
+  { value: 'ftp', label: 'ftp' },
+  { value: 'hdfs', label: 'hdfs' },
+  { value: 'kafka', label: 'kafka' },
+  { value: 'gp', label: 'gp' },
+  { value: 'db2', label: 'db2' },
+  { value: 'mapreduce', label: 'mapreduce' },
+  { value: 'spark', label: 'spark' },
+  { value: 'hawq', label: 'hawq' },
+  { value: 'rds', label: 'rds' },
+  { value: 'drds', label: 'drds' },
+  { value: 'restful', label: 'restful' },
+  { value: 'mongodb', label: 'mongodb' },
+  { value: 'redis', label: 'redis' },
+  { value: 'es', label: 'es' },
+  { value: 'analyticdb', label: 'analyticdb' },
+  { value: 'telnet', label: 'telnet' },
+  { value: 'postgresql', label: 'postgresql' },
+  { value: 'sqlserver', label: 'sqlserver' },
+];
+
+export const AUTHENTICATION_RES = [
+  { value: 'ACCETP', label: '鉴权通过' },
+  { value: 'REJECT', label: '鉴权失败' },
+  { value: 'DROP', label: '任务丢弃' },
+];

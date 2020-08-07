@@ -1,0 +1,46 @@
+@import '~@/pages/styles/vars.less';
+
+.sysManageCon {
+  margin-top: 10px;
+  background: #fff;
+  & > :global(.ant-collapse) {
+    background: #fff;
+  }
+  .collTitle {
+    font-size: 12px;
+    color: @primary-color;
+    margin-right: 5px;
+  }
+  .collIcon {
+    color: @primary-color;
+  }
+  .sysHeaderCon {
+    display: flex;
+    padding: 12px @search-form-padding-h;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    .sysHeaderRight {
+      display: flex;
+      align-items: center;
+    }
+    .sysHeaderDownTemp {
+      font-size: 12px;
+      color: @primary-color;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+  :global {
+    .ant-collapse-header {
+      background: #fff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    }
+    .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+      padding-top: 0;
+    }
+  }
+}
+.searchInput {
+  width: 250px;
+}

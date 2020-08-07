@@ -1,0 +1,21 @@
+export default {
+  DATA_DOWNLOAD: 'Data Download',
+  DATA_FILE_NAME: 'Data File Name',
+  REQUEST_DATE: 'Request Time',
+  SENSITIVE_COLUMNS_NUM: 'Num. of Sensitive Fields',
+  DOWNLOAD_DATE: 'Download Time',
+  IS_GENERATING: 'Generating',
+  GENERATED_FAILED: 'Generated failed',
+  WAIT_FOR_DOWNLOADING: 'Wait for downloading',
+  ALREADY_DOWNLOADED: 'Downloaded',
+  FILE_INVALID: 'Invalid',
+  CHECK_ALL: 'Check All',
+  SENSITIVE_COLUMNS: 'Sensitive Fields',
+  DATABASE_BELONGS: 'Db belongs',
+  TABLE_BELONGS: 'Table belongs',
+  SELECT_ANY_ITEM: 'Please select at least one item!',
+  DELETE_ITEMS_CONFIRM: 'Do you Want to delete these items?',
+  DELETE_ITEM_CONFIRM: 'Do you Want to delete the item?',
+  NOT_SUPPORT_DOWNLOAD:
+    'Your browser does not support downloading, please change the browser to download!',
+};

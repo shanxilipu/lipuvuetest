@@ -1,0 +1,45 @@
+.indexCon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .tableCon {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    background: #fff;
+    margin-top: 10px;
+  }
+  .expendContentCon {
+    display: flex;
+    .expendItem {
+      flex: 1;
+      display: flex;
+      .label {
+        padding-right: 10px;
+      }
+      .expendContentMain {
+        flex: 1;
+      }
+    }
+  }
+  :global {
+    .model_table_ellipsis,
+    .model_table_ellipsis .titleSpan {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: 'break-word';
+      word-break: 'break-all';
+    }
+    .model_table_ellipsis .titleSpan {
+      max-width: 100%;
+      display: inline-block;
+    }
+    .ant-table table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+  }
+}

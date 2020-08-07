@@ -1,0 +1,56 @@
+@import '~@/pages/styles/vars.less';
+
+.mainCon {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  .rightCon {
+    flex: 1;
+    overflow: auto;
+    .noSelFile {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      background: #fff;
+      padding: 0 @search-form-padding-h;
+    }
+    .selTreeItem {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  :global {
+    .ant-table-row-selected {
+      background: #eefffe;
+      td {
+        background: transparent !important;
+      }
+    }
+
+    .model_table_ellipsis,
+    .model_table_ellipsis .titleSpan {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .model_table_ellipsis .titleSpan {
+      max-width: 100%;
+      display: inline-block;
+    }
+    .ant-table table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+  }
+}
+.selectCatalogue {
+  padding: 0 @search-form-padding-h;
+  line-height: 40px;
+  height: 40px;
+  background: #fff;
+}

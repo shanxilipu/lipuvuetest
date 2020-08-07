@@ -1,0 +1,22 @@
+.commonInquireCon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .tableCon {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    background: #fff;
+    overflow: auto;
+
+    :global {
+      .ant-table-wrapper {
+        flex: 1;
+        overflow: auto;
+      }
+    }
+  }
+}

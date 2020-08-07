@@ -1,0 +1,57 @@
+.cardMeta {
+  margin: 0;
+  border-left: 3px solid #fff;
+  transition: border 0.8s;
+  border-bottom: 1px solid #ececec;
+  background-color: #fff;
+}
+
+.cardMeta:hover {
+  border-left: 3px solid @primary-color;
+}
+
+.taskHead {
+  height: 88px;
+  padding: 20px 20px 15px;
+  :global {
+    .ant-row {
+      height: 100%;
+    }
+    .ant-col {
+      height: 100%;
+    }
+  }
+  .acceptanceWrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.taskHeadLabel {
+  font-size: 12px;
+  color: #999;
+}
+
+.taskNameLabel {
+  font-size: 14px;
+  color: #333;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 34px;
+  margin-right: 4px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-height: 34px;
+}
+
+.itemCenter {
+  display: flex;
+  align-items: center;
+}
+.flexEnd {
+  justify-content: flex-end;
+}

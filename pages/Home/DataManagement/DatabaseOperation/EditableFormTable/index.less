@@ -1,0 +1,45 @@
+.editableTable {
+  :global {
+    .editable-row {
+      .ant-form-explain {
+        position: absolute;
+        font-size: 12px;
+        margin-top: -4px;
+      }
+    }
+    .ant-select {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+.operationBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: #333;
+    display: inline-block;
+  }
+  i {
+    font-size: 16px;
+  }
+  a:first-child {
+    padding-right: 8px;
+  }
+  a:not(:first-child) {
+    padding-left: 8px;
+  }
+  .operationBtnSeperator {
+    height: 12px;
+    width: 0.5px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+.noDataFixedTable {
+  :global {
+    .ant-table-fixed-header .ant-table-header.ant-table-hide-scrollbar {
+      margin-bottom: 1px !important;
+    }
+  }
+}

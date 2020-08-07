@@ -1,0 +1,65 @@
+@import '~@/pages/styles/vars.less';
+
+.tabs {
+  flex: 1 1 auto;
+  background: #fff;
+
+  & > :global(.ant-tabs-content) {
+    height: calc(100% - 57px);
+
+    & > :global(.ant-tabs-tabpane) {
+      height: 100%;
+      overflow: auto;
+    }
+  }
+}
+
+.buttonsBar {
+  padding: 0 @table-padding;
+}
+
+.expanded {
+  padding: 14px 0;
+  margin-left: 25px;
+  display: flex;
+  .expandedDiv {
+    flex: 1;
+  }
+  div {
+    flex: 1;
+    padding-left: 8px;
+  }
+}
+
+.datcolTaskId {
+  margin: 0;
+  padding: 0;
+
+  a {
+    margin-left: 5px;
+    color: @primary-color;
+  }
+}
+
+.modalHeight {
+  height: 298px;
+}
+
+.buttonUpload {
+  margin-left: 10px;
+}
+
+.importModal {
+  position: relative;
+  height: 28px;
+}
+
+.inputSearch {
+  width: 357px;
+  padding-left: 14px;
+}
+
+.inputmodalHeight {
+  height: 560px;
+}
+

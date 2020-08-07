@@ -1,0 +1,31 @@
+@import '~@/pages/styles/vars.less';
+
+.advancedFilter {
+  height: auto;
+  background: #fff;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+.advancedFilter.folded {
+  :global {
+    .ant-spin-container {
+      height: 44px;
+      overflow: hidden;
+    }
+  }
+}
+
+.searchButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+  margin-bottom: 4px;
+  & > button,
+  & > a {
+    margin-left: @buttons-spacing;
+  }
+  & > button:first-child {
+    margin-left: 0;
+  }
+}

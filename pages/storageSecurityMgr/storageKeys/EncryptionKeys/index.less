@@ -1,0 +1,53 @@
+@import '~@/pages/styles/vars.less';
+@import '~antd/lib/style/themes/default.less';
+
+.topBar {
+  padding: @table-padding @table-padding 0;
+}
+.table {
+  height: calc(100% - @btn-height-base - @table-padding);
+}
+.newKeyModal {
+  display: flex;
+  height: 100%;
+  border: 1px solid @border-color-base;
+  .newKeyModalLeft {
+    width: 270px;
+    border-right: 1px solid @border-color-base;
+  }
+  .newKeyModalRight {
+    padding-top: 40px;
+    width: calc(100% - 270px);
+  }
+}
+.keyDetailModalBox {
+  padding: @modal-body-padding;
+  .keyPath {
+    font-size: @font-size-lg;
+    .keyName {
+      color: @heading-color;
+    }
+  }
+  .panel {
+    display: flex;
+    .panelItem {
+      width: 50%;
+      .scriptContentBox {
+        height: 300px;
+      }
+    }
+  }
+}
+.indicatorRow {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  font-size: @font-size-lg;
+  color: @heading-color;
+  .indicator {
+    width: 4px;
+    height: 20px;
+    margin-right: 6px;
+    background-color: @primary-color;
+  }
+}

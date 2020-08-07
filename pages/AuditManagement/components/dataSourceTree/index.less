@@ -1,0 +1,40 @@
+.dataSourceTreeCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  .searchCon {
+    padding-bottom: 10px;
+  }
+  .treeCon {
+    flex: 1;
+    overflow: auto;
+  }
+  .treeCon.showSearch {
+    height: calc(100% - 38px);
+  }
+
+  .rootTreeNode {
+    > :global(.ant-tree-node-content-wrapper) {
+      font-weight: bold;
+      > :global(.ant-tree-iconEle) {
+        width: auto;
+      }
+    }
+  }
+  :global {
+    .ant-spin-spinning {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+    }
+    .ant-spin-dot-spin {
+      top: 50px;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+// 内嵌表格 通用样式
+.model_table_wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .noExpand {
+    :global {
+      .ant-table-thead th:first-child,
+      .ant-table-body td:first-child {
+        padding-left: 8px !important;
+        position: relative;
+      }
+    }
+  }
+  :global {
+    th.model_table_ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      word-wrap: 'break-word';
+      word-break: 'break-all';
+    }
+    .ant-table-small {
+      border: none;
+    }
+    .ant-table-wrapper,
+    .ant-spin-nested-loading,
+    .ant-spin-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-spin-container > div {
+      overflow: auto;
+    }
+    td.model_table_ellipsis {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .ant-table-row-expand-icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 16px;
+    }
+    .model_gray {
+      color: #999;
+    }
+    td.model_status {
+      color: #ffa202;
+    }
+    .model_action .anticon {
+      margin-right: 8px;
+    }
+    .ant-table table {
+      table-layout: fixed;
+      word-break: break-all;
+      td.model_table_word {
+        word-break: break-word;
+      }
+    }
+    tbody tr {
+      cursor: pointer;
+    }
+    .ant-table-row {
+      color: #333;
+      .model_icon_wrapper .anticon {
+        margin-left: -15px;
+        margin-right: 5px;
+      }
+    }
+    .ant-table-thead th:first-child,
+    .ant-table-body td:first-child {
+      padding-left: 50px !important;
+      position: relative;
+    }
+    .ant-table-expanded-row {
+      .ant-table-thead > tr > th {
+        color: #999;
+        font-weight: normal;
+        text-align: left;
+        border-bottom: none;
+      }
+      tr:hover > td {
+        background: transparent;
+      }
+      td:first-child {
+        padding-left: 15px;
+      }
+      .ant-table-wrapper td:first-child {
+        padding-left: 50px;
+      }
+    }
+    .ant-spin-container {
+      padding-bottom: 42px;
+    }
+    tr .ant-spin-container {
+      padding-bottom: 0;
+    }
+    .ant-table-pagination {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 8px 0;
+    }
+  }
+}

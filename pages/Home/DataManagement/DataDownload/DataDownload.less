@@ -1,0 +1,126 @@
+@import '~@/pages/styles/vars.less';
+
+.exportFileSearchBar {
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 15px 0;
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-label > label {
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+.exportFile {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  border-left: 3px solid #fff;
+}
+.exportFile.active,
+.exportFile:hover {
+  border-left: 3px solid @primary-color;
+  .exportFileRow {
+    background: #fbfeff;
+  }
+}
+.exportFileRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  height: 80px;
+}
+.exportFileColumn {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  .exportFileColumnTitle {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .exportFileColumnValue {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.85);
+    min-height: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    width: 100%;
+    padding-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.btnsGroup {
+  display: flex;
+  align-items: center;
+  button {
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
+  button:last-child {
+    margin-right: 15px;
+  }
+}
+.fileState {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  > span {
+    margin-left: 5px;
+  }
+}
+.filesCon {
+  overflow: auto;
+  height: calc(100% - 85px - @table-footer-height - 20px);
+}
+.bottomPagination {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  padding: 0 15px;
+}
+.exportFileDetail {
+  background: #fff;
+  display: flex;
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  .exportFileDetailColumn {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .exportFileDetailTitle {
+    color: rgba(0, 0, 0, 0.45);
+    padding-right: 10px;
+  }
+  .exportFileDetailTitle:after {
+    content: ':';
+  }
+}

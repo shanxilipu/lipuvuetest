@@ -1,0 +1,45 @@
+.expandedRow {
+  display: flex;
+  align-items: center;
+}
+.expandedRow:not(:first-child) {
+  margin-top: 15px;
+}
+.expandedRow > div {
+  font-size: 15px;
+}
+.expandedRow label:after {
+  content: ':';
+}
+.expandedRow label {
+  margin-right: 8px;
+}
+:global {
+  .model_table_ellipsis,
+  .model_table_ellipsis .titleSpan {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .model_table_ellipsis .titleSpan {
+    max-width: 100%;
+    display: inline-block;
+  }
+  .ant-table table {
+    table-layout: fixed;
+    word-break: break-all;
+  }
+}
+.abnormalCon {
+  display: flex;
+  align-items: center;
+  > div:first-child {
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f00;
+  }
+}

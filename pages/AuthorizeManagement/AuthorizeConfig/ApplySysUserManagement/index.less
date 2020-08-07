@@ -1,0 +1,131 @@
+.leftCon {
+  width: 210px;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  .treeTitle {
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    background: #fff;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+    padding-left: 10px;
+  }
+  .searchCon {
+    padding: 8px 10px;
+    background: #eff1f4;
+  }
+  .treeOutCon {
+    height: 0;
+    flex: 1;
+    overflow: hidden;
+    background: #fff;
+  }
+  .treeCon {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.directoryTitleCon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .directoryTitleName {
+    flex: 1;
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .more {
+    display: none;
+  }
+}
+
+.operaBtn {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  border-radius: 2px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.treeOutCon {
+  :global {
+    .ant-tree li span.ant-tree-switcher {
+      float: left;
+      width: 24px;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      display: block;
+      padding-left: 24px;
+    }
+    .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper > span,
+    .ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper
+      > span {
+      position: inherit;
+      z-index: 1;
+      width: 100%;
+    }
+    .ant-tree-directory
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before,
+    .ant-tree-directory
+      .ant-tree-child-tree
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before {
+      background: #e6f7ff;
+    }
+    .ant-tree-directory > li span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+    .ant-tree-directory
+      .ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+      color: #1890ff;
+    }
+
+    .ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-switcher,
+    .ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-switcher {
+      color: #1890ff;
+    }
+  }
+  :global(.ant-tree-node-selected) .more {
+    display: inline-block !important;
+  }
+  :global(.ant-tree-node-content-wrapper):hover .more {
+    display: inline-block;
+  }
+}
+
+.modalCon {
+  .model_table_ellipsis,
+  .model_table_ellipsis .titleSpan {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: 'break-word';
+    word-break: 'break-all';
+  }
+  .model_table_ellipsis .titleSpan {
+    max-width: 100%;
+    display: inline-block;
+  }
+  .ant-table table {
+    table-layout: fixed;
+    word-break: break-all;
+  }
+}

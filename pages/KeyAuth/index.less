@@ -1,0 +1,167 @@
+@import '~antd/lib/style/themes/default.less';
+
+.KeyAuthWrap {
+  :global {
+    .whiteBg {
+      border: 1px solid @border-color-split;
+      padding: 12px;
+      // margin: 8px;
+      margin-left: 8px;
+      overflow: hidden;
+      > div:first-child {
+        margin-bottom: 12px;
+        + div {
+          overflow: hidden;
+        }
+      }
+    }
+    .ant-form-item-label {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .ant-table-body table tr th:first-child,
+    .ant-table-body table tr td:first-child {
+      padding-left: 8px !important;
+    }
+    .ant-table-wrapper,
+    .ant-spin-nested-loading,
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+  table a + a {
+    margin-left: 15px;
+  }
+}
+.colTitle {
+  line-height: 32px;
+  border-bottom: 1px solid @border-color-split;
+  background-color: @background-color-base;
+  padding: 0 12px;
+  width: 100%;
+  :global(.ant-select) {
+    width: 100%;
+  }
+}
+.leftCont {
+  width: 20%;
+  // padding: 8px 0 8px 8px;
+  height: 100%;
+  > div {
+    border: 1px solid @border-color-split;
+    background-color: #fff;
+  }
+}
+.treeWrap {
+  overflow: auto;
+}
+.listHeader {
+  background-color: #fff;
+  min-height: 44px;
+  padding: 2px 10px;
+  border: 1px solid @border-color-split;
+  // margin: 8px 8px 0 8px;
+  margin: 0 0 8px 8px;
+  button {
+    margin-left: 10px;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.drawWrap {
+  :global {
+    .ant-drawer-wrapper-body {
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-drawer-body {
+      display: flex;
+      flex: 1;
+    }
+    .ant-table-body table tr th:first-child,
+    .ant-table-body table tr td:first-child {
+      padding-left: 8px !important;
+    }
+  }
+  table a + a {
+    margin-left: 15px;
+  }
+}
+
+.addKeyWrap {
+  :global {
+    .ant-drawer-body {
+      padding: 12px;
+      overflow: hidden;
+    }
+    .fullHeight {
+      > div {
+        overflow: auto;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form + .ant-form {
+      border-top: none;
+    }
+    .ant-table-wrapper {
+      margin-top: 8px;
+    }
+    .ant-calendar-picker {
+      width: 100% !important;
+    }
+    .ant-form-item-label {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .ant-radio-wrapper {
+      overflow: hidden;
+      vertical-align: middle;
+      width: 43%;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      + .ant-radio-wrapper {
+        width: 48%;
+      }
+    }
+  }
+  .bottom {
+    margin-bottom: -4px;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 8px 12px 0 12px;
+    border-top: 1px solid @border-color-split;
+    margin-top: 12px;
+    text-align: right;
+  }
+  button {
+    margin-left: 10px;
+  }
+}
+.addTitle {
+  margin-bottom: 12px;
+  span {
+    color: @error-color;
+    padding: 0 2px;
+  }
+}
+
+.boxWrap {
+  border: 1px solid @border-color-split;
+  padding: 8px;
+}
+
+.addRight {
+  width: 320px;
+  height: 100%;
+  margin-left: 12px;
+  .boxWrap {
+    padding: 0;
+  }
+}

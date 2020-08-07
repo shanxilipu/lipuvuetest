@@ -1,0 +1,83 @@
+.indexCon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .mainCon {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 10px 0;
+    background: #fff;
+    .btnCon {
+      margin-bottom: 10px;
+    }
+    .tableCon {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
+
+.operator {
+  color: @primary-color;
+  cursor: pointer;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.detailsCon {
+  .detailsMain {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .tableCon {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+  :global {
+    .ant-drawer-wrapper-body {
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-drawer-body {
+      flex: 1;
+      padding: 0;
+      overflow: hidden;
+      padding-top: 16px;
+    }
+  }
+}
+
+.CreatKeyCon {
+  .titleCon {
+    display: flex;
+    align-items: center;
+    color: #00001c;
+    .titleIcon {
+      color: #f5222d;
+      padding: 4px 2px 0;
+    }
+  }
+  .CreatKeyMain {
+    display: flex;
+    height: 380px;
+    .catlogCon {
+      width: 320px;
+      height: 100%;
+      border: 1px solid #e0e0e0;
+      margin-right: 8px;
+    }
+    .keySetttr {
+      flex: 1;
+      overflow: auto;
+      border: 1px solid #e0e0e0;
+      padding-right: 20px;
+      padding-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,506 @@
+.indexCon {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .spinStyle {
+    position: absolute;
+    z-index: 100;
+    height: calc(~'100% - 40px');
+    width: calc(~'100% - 40px');
+    background: #fff;
+    opacity: 0.3;
+    span {
+      top: 200px;
+    }
+  }
+  :global {
+    .modelTableIcon {
+      width: 30px;
+    }
+    .modelTableName {
+      width: 150px;
+    }
+    .modelTableOperate {
+      width: 130px;
+      text-align: center;
+    }
+    .modelTableSize {
+      width: 80px;
+    }
+    .modelTableType {
+      width: 60px;
+    }
+    .modelTableLastModified {
+      width: 160px;
+    }
+    .model_table_ellipsis,
+    .model_table_ellipsis .titleSpan {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: 'break-word';
+      word-break: 'break-all';
+    }
+    .model_table_ellipsis .titleSpan {
+      max-width: 100%;
+      display: inline-block;
+    }
+    .ant-table table {
+      table-layout: fixed;
+      word-break: break-all;
+    }
+  }
+}
+
+.mainCon {
+  flex: 1;
+  -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1; /* OLD - Firefox 19- */
+  -webkit-flex: 1; /* Chrome */
+  -ms-flex: 1;
+  display: flex;
+  // border: 1px solid #eaecee;
+  overflow: auto;
+}
+
+.leftCon {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  .leftTitle {
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #eaecee;
+  }
+  .leftTreeCon {
+    flex: 1;
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    .tabAndSearchCon {
+      background: #f8f8f8;
+      .tabCon {
+        height: 40px;
+        border-bottom: 1px solid #ddd;
+        .btnCon {
+          height: 40px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          > span {
+            display: inline-block;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+          .avtiveBtn {
+            color: @primary-color;
+            border-bottom: 2px solid @primary-color;
+          }
+        }
+      }
+      .searchCon {
+        padding: 8px 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eaecee;
+        .childListSearch {
+          width: 164px;
+          height: 32px;
+        }
+        .refreshIcon {
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+    .childList {
+      width: 210px;
+      height: 100%;
+      padding: 8px;
+      overflow: auto;
+      border-left: 1px solid #eaecee;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 1; /* OLD - Firefox 19- */
+      -webkit-flex: 1; /* Chrome */
+      -ms-flex: 1;
+      .childListCon {
+        flex: 1;
+        -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1; /* OLD - Firefox 19- */
+        -webkit-flex: 1; /* Chrome */
+        -ms-flex: 1;
+        overflow: auto;
+        .directoryTitleCon {
+          display: flex;
+          align-items: center;
+          .directoryTitleName {
+            flex: 1;
+            -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1; /* OLD - Firefox 19- */
+            -webkit-flex: 1; /* Chrome */
+            -ms-flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+      .noDataTip {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+      }
+      :global {
+        .ant-tree li span.ant-tree-switcher {
+          float: left;
+          width: 24px;
+        }
+        .ant-tree li .ant-tree-node-content-wrapper {
+          display: block;
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+}
+
+.rightCon {
+  display: flex;
+  flex-direction: column;
+  background: #eff1f4;
+  .noSelFile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    background: #fff;
+  }
+}
+
+.consoleCon {
+  height: 100%;
+  background: #fff;
+  padding: 8px 0;
+  .tabCon {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  :global {
+    .ant-tabs-nav {
+      padding-left: 20px;
+    }
+    .ant-tabs-top-content {
+      flex: 1;
+    }
+    .ant-tabs-tabpane-active {
+      height: 100%;
+    }
+  }
+}
+
+.sshCon {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .sshBtnCon {
+    display: flex;
+    padding-bottom: 10px;
+    button {
+      padding: 0;
+      line-height: unset;
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      border: 1px solid #d5d5d5;
+      margin-right: 10px;
+      i {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+  .terminalCon {
+    flex: 1;
+    :global {
+      .terminal.xterm {
+        height: 100% !important;
+        padding-bottom: 20px;
+      }
+      .xterm-screen,
+      .xterm-screen canvas {
+        height: 100% !important;
+      }
+    }
+  }
+  .terminFooter {
+    display: flex;
+    flex-direction: row;
+    line-height: 32px;
+    > div {
+      padding-right: 20px;
+    }
+    > div:last-child {
+      flex: 1;
+    }
+  }
+}
+
+.ftpCon {
+  height: 100%;
+  background: #fff;
+  overflow: auto;
+  .ftpOutCon {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .ftpBtnCon {
+    display: flex;
+    padding: 5px 0 5px 20px;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 20px;
+    span {
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      border: 1px solid #d5d5d5;
+      margin-right: 10px;
+      &.disabled {
+        color: #ccc;
+        i {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  .ftpTransportCon {
+    display: flex;
+    flex-direction: row;
+    min-height: 350px;
+    border-bottom: 1px solid #e8e8e8;
+    flex: 1;
+    .ftpLocalCon {
+      flex: 2;
+      border-right: 1px solid #e7e7e7;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      .ftpLocalTitle {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.65);
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        border-bottom: 1px solid #e9e9e9;
+      }
+      .ftpLocalDirSelCon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+        padding: 0 20px;
+        .ftpLocalDirPath {
+          margin-right: 10px;
+        }
+        .ftpLocalDirSel,
+        .ftpLocalDirUp {
+          width: 28px;
+          height: 28px;
+          text-align: center;
+          line-height: 28px;
+          border: 1px solid #d5d5d5;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        .ftpLocalDirSel {
+          position: relative;
+          .inputFile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            cursor: pointer;
+          }
+        }
+      }
+      .dirCon {
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.04);
+        flex: 1;
+        overflow: hidden;
+        > div {
+          background: #fff;
+          height: 100%;
+          width: 100%;
+          overflow: auto;
+        }
+        .localDirTable {
+          height: 100%;
+          background: #fff;
+        }
+      }
+    }
+    .ftpRemoteCon {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      :global {
+        .ant-tabs-bar {
+          margin-bottom: 14px;
+        }
+        .ant-tabs-nav {
+          padding-left: 20px;
+          padding-top: 5px;
+        }
+        .ant-tabs-top-content {
+          flex: 1;
+          overflow: hidden;
+        }
+        .ant-tabs-tabpane-active {
+          height: 100%;
+        }
+      }
+      .tabCon {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .painCon {
+          flex: 1;
+          display: flex;
+          overflow: hidden;
+          .noConnTip {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .commandCon {
+    height: 232px;
+    padding: 20px;
+    min-height: 232px;
+    background: #fff;
+    .panChild {
+      height: 145px;
+      overflow: auto;
+      background: #f5f5f5;
+    }
+    .commandOutCon {
+      .comandItem {
+        display: flex;
+        padding: 3px 0;
+      }
+      .lable {
+        width: 100px;
+        text-align: right;
+      }
+      .content {
+        flex: 1;
+        padding-left: 5px;
+      }
+    }
+  }
+  :global {
+    .ant-table-small {
+      border: none;
+    }
+  }
+}
+
+.FtpUpModuleCon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  .spinStyle {
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    opacity: 0.3;
+    span {
+      top: 150px;
+    }
+  }
+  .ftpRemoteDirSelCon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    .ftpLocalDirPath {
+      margin-right: 10px;
+    }
+    .ftpLocalDirSel,
+    .ftpLocalDirUp {
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      border: 1px solid #d5d5d5;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .dirCon {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.04);
+    flex: 1;
+    overflow: hidden;
+    > div {
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+    }
+    .localDirTable {
+      height: 100%;
+      background: #fff;
+    }
+  }
+}

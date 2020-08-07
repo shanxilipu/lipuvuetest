@@ -1,0 +1,157 @@
+.indexCon {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .collTitle {
+    font-size: @font-size-base;
+    color: @primary-color;
+    margin-right: 5px;
+  }
+  .collIcon {
+    color: @primary-color;
+    font-size: 16px;
+  }
+  .list {
+    :global {
+      .ant-list-header {
+        padding: 16px 0;
+        background: #fafafa;
+      }
+    }
+  }
+  .listHeader {
+    font-size: @font-size-base;
+    color: #333;
+    padding: 0 16px;
+  }
+  .listItem {
+    width: 100%;
+    font-size: @font-size-base;
+    color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    :global {
+      .ant-col {
+        padding-right: 20px;
+      }
+    }
+  }
+  .serarchCon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .inpitWidth100 {
+      width: 100px;
+      margin: 0 10px;
+    }
+    .inpitWidth40 {
+      width: 40px;
+      cursor: pointer;
+      input {
+        border: none;
+        padding: 0;
+        text-align: center;
+        color: @primary-color;
+      }
+      :global {
+        .ant-time-picker-icon {
+          display: none;
+        }
+      }
+    }
+    .selTimeCon {
+      display: flex;
+      align-items: center;
+      color: @primary-color;
+      .iconStyle {
+        font-size: 14px;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+  .alarmSMSCon {
+    margin-top: 20px;
+  }
+  .messageCon {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.45);
+      margin-top: 5px;
+    }
+  }
+  :global {
+    .ant-collapse-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    }
+    .ant-tag {
+      // margin-right: 0;
+      padding: 0 4px;
+    }
+  }
+}
+
+.btnCon {
+  text-align: right;
+  padding-top: 15px;
+  border-top: 1px solid @border-color-base;
+}
+
+.treeOutCon {
+  :global {
+    .ant-tree li span.ant-tree-switcher {
+      float: left;
+      width: 24px;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      display: block;
+      padding-left: 24px;
+    }
+    .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper > span,
+    .ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper
+      > span {
+      position: inherit;
+      z-index: 1;
+    }
+    .ant-tree-directory
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before,
+    .ant-tree-directory
+      .ant-tree-child-tree
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before {
+      background: #e6f7ff;
+    }
+    .ant-tree-directory > li span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+    .ant-tree-directory
+      .ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+      color: #1890ff;
+    }
+
+    .ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-switcher,
+    .ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-switcher {
+      color: #1890ff;
+    }
+  }
+  :global(.ant-tree-node-selected) .more {
+    display: inline-block !important;
+  }
+  :global(.ant-tree-node-content-wrapper):hover .more {
+    display: inline-block;
+  }
+}

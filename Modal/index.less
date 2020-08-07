@@ -1,0 +1,27 @@
+@import '~antd/lib/style/themes/default.less';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+}
+.body {
+  padding: @modal-body-padding;
+  max-height: calc(100vh - 55px - 48px);
+  overflow: auto;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 16px;
+  border-top: 1px solid @border-color-base;
+  > button {
+    margin-left: 10px;
+  }
+  > button:first-child {
+    margin-left: 0;
+  }
+}
+.footer.centerFooter {
+  justify-content: center;
+}

@@ -1,0 +1,118 @@
+.view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .content {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100%;
+    min-height: calc(100vh - 120px);
+    .header {
+      height: 40px;
+      margin: 16px 0;
+      width: 100%;
+    }
+    .tabs {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin: 0 20px 20px;
+      overflow: hidden;
+
+      .operatorCon {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+        .tree {
+          flex: 1;
+          overflow: auto;
+        }
+      }
+      .datasourceCon {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+      }
+      .tableCon {
+        flex: 12;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        .selectedOperatorCon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          > div {
+            flex: 1;
+          }
+        }
+        .ra {
+          flex: 1;
+          overflow: auto;
+          padding: 0 10px;
+        }
+        .rb {
+          width: 200px;
+          margin: 0 auto;
+          text-align: center;
+          margin-top: 10px;
+          button:nth-child(2) {
+            margin-left: 16px;
+          }
+        }
+      }
+      .overflowTxt {
+        > div {
+          display: inline-block;
+          width: calc(100% - 105px);
+          vertical-align: middle;
+          > span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            width: 100%;
+            display: inline-block;
+            white-space: nowrap;
+          }
+        }
+      }
+      :global {
+        .ant-col.ant-col-6,
+        .ant-col.ant-col-12 {
+          height: 100%;
+        }
+        .ant-card {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.require {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.require::before {
+  display: inline-block;
+  margin-right: 4px;
+  color: #f5222d;
+  font-size: 14px;
+  font-family: SimSun, sans-serif;
+  line-height: 1;
+  content: '*';
+}

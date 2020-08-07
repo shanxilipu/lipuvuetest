@@ -1,0 +1,68 @@
+.view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .content {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100%;
+    min-height: calc(100vh - 120px);
+    .header {
+      margin: 16px 0;
+    }
+    .tabs {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin: 0 20px 20px;
+      overflow: hidden;
+      .datasourceCon {
+        flex: 8;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-right: 20px;
+      }
+      .tableCon {
+        flex: 16;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        .selectedOperatorCon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0 10px 10px;
+          .searchCon {
+            flex: 1;
+          }
+        }
+        .ra {
+          flex: 1;
+          overflow: auto;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+.require {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.require::before {
+  display: inline-block;
+  margin-right: 4px;
+  color: #f5222d;
+  font-size: 14px;
+  font-family: SimSun, sans-serif;
+  line-height: 1;
+  content: '*';
+}

@@ -1,0 +1,52 @@
+@import '~@/pages/styles/vars.less';
+@import '~antd/lib/style/themes/default.less';
+
+@topBarHeight: 46px;
+.container {
+  background: #fff;
+  height: 100%;
+  display: flex;
+}
+.tree {
+  width: 250px;
+  height: 100%;
+  padding-top: calc(@table-padding - 8px);
+}
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: @topBarHeight;
+  padding: 0 @table-padding;
+  border-bottom: 1px solid @border-color-base;
+  .searchBox {
+    width: @search-input-width;
+  }
+}
+.right {
+  flex: 1;
+  height: 100%;
+  border-left: 1px solid @border-color-base;
+  .table {
+    height: calc(100% - @topBarHeight - 1px);
+  }
+}
+.transferCon {
+  flex: auto;
+  overflow: hidden;
+  padding: 0 @modal-body-padding @modal-body-padding;
+  .leftTreeSearchBox {
+    margin: 0;
+  }
+  .rightSearchBox {
+    padding: @table-padding @table-padding 0;
+    width: 70%;
+  }
+}
+.selectedGroupRow {
+  height: 34px;
+  line-height: 34px;
+  font-size: @font-size-lg;
+  padding: 0 @modal-body-padding;
+  margin-bottom: 10px;
+}

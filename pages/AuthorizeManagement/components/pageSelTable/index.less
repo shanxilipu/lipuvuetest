@@ -1,0 +1,31 @@
+.pageSelTable {
+  :global {
+    .ant-table-row-selected {
+      background: #fafafa;
+    }
+    .ant-table-row-clicked {
+      background: #eefffe;
+      td {
+        background: transparent !important;
+      }
+    }
+    .model_table_ellipsis,
+    .model_table_ellipsis .titleSpan {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-wrap: 'break-word';
+      word-break: 'break-all';
+    }
+    .model_table_ellipsis .titleSpan {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .footerCon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+}
